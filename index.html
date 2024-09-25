@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Business Growth Solutions</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --text-color: #333333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        header a:hover {
+            color: var(--accent-color);
+            transition: 0.3s;
+        }
+        #showcase {
+            min-height: 400px;
+            background: linear-gradient(rgba(52, 152, 219, 0.7), rgba(46, 204, 113, 0.7)), url('/api/placeholder/1200/400') no-repeat center;
+            background-size: cover;
+            text-align: center;
+            color: #ffffff;
+            padding-top: 150px;
+        }
+        #showcase h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #c0392b;
+        }
+        #boxes {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .box i {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        #team {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .team-member {
+            flex: 0 1 200px;
+            margin: 20px;
+            text-align: center;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+        }
+        #success-stories {
+            background-color: var(--bg-color);
+            padding: 50px 0;
+        }
+        .success-story {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .success-story img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #contact {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+        form input, form textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        form button {
+            padding: 10px;
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        form button:hover {
+            background: #2980b9;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: var(--primary-color);
+            text-align: center;
+        }
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li,
+            #boxes .box,
+            .team-member {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            header {
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Asian</span> Business Growth Solutions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#success-stories">Success Stories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Empowering Asian Businesses</h1>
+            <p>Modernizing operations and equipping underprivileged businesses with tools for success</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Asian Business Growth Solutions is dedicated to uplifting small underprivileged Asian businesses by modernizing their operations and equipping them with tools successful businesses have. Our mission is to bridge the gap for these businesses, providing services such as website and app development, social media management, and newer business streamlining strategies.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div id="boxes">
+                <div class="box">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom websites to establish a strong online presence</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Digital Marketing</h3>
+                    <p>Social media strategies to reach a wider audience</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business Strategy</h3>
+                    <p>Streamlining operations for improved efficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Jayden">
+                    <h3>Jayden</h3>
+                    <p>Web Development</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Matthew">
+                    <h3>Matthew</h3>
+                    <p>Business Strategy</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Kingston">
+                    <h3>Kingston</h3>
+                    <p>Digital Marketing</p>
+                </div>
+                <!-- Add more team members as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="success-stories">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="success-story">
+                <img src="/api/placeholder/300/200" alt="Little Genius Learning Center">
+                <h3>Little Genius Learning Center</h3>
+                <p>We helped Little Genius Learning Center establish an online presence through a custom website and implemented digital marketing strategies, resulting in a 50% increase in new student enrollments.</p>
+            </div>
+            <!-- Add more success stories as needed -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Asian Business Growth Solutions, Copyright &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
