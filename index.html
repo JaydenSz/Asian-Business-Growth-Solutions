@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
     <title>Asian Business Growth Solutions</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <style>
@@ -75,7 +75,7 @@
         }
         #showcase {
             min-height: 400px;
-            background: linear-gradient(rgba(52, 152, 219, 0.7), rgba(46, 204, 113, 0.7)), url('/api/placeholder/1200/400') no-repeat center;
+            background: linear-gradient(rgba(52, 152, 219, 0.7), rgba(46, 204, 113, 0.7)), url('https://via.placeholder.com/1200x400') no-repeat center;
             background-size: cover;
             text-align: center;
             color: #ffffff;
@@ -137,7 +137,7 @@
             justify-content: center;
         }
         .team-member {
-            flex: 0 1 200px;
+            flex: 1 1 200px;
             margin: 20px;
             text-align: center;
             background: #fff;
@@ -219,7 +219,6 @@
             background-color: var(--primary-color);
             text-align: center;
         }
-        /* New styles for additional sections */
         #mission {
             background-color: var(--secondary-color);
             color: white;
@@ -319,7 +318,7 @@
         <div class="container">
             <h1>Empowering Asian Businesses</h1>
             <p>Modernizing operations and equipping underprivileged businesses with tools for success</p>
-            <a href="#contact" class="btn">Get Started</a>
+            <a href="#contact" class="btn" aria-label="Get Started">Get Started</a>
         </div>
     </section>
 
@@ -365,42 +364,42 @@
             <h2>Our Team</h2>
             <div class="team-container">
                 <div class="team-member">
-                    <img src="/api/placeholder/150/150" alt="Jayden">
+                    <img src="https://via.placeholder.com/150" alt="Jayden">
                     <h3>Jayden</h3>
                     <p>Web & App Development</p>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/150/150" alt="Jason">
+                    <img src="https://via.placeholder.com/150" alt="Jason">
                     <h3>Jason</h3>
                     <p>Web & App Development</p>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/150/150" alt="Daniel">
+                    <img src="https://via.placeholder.com/150" alt="Daniel">
                     <h3>Daniel</h3>
                     <p>Web & App Development</p>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/150/150" alt="Matthew">
+                    <img src="https://via.placeholder.com/150" alt="Matthew">
                     <h3>Matthew</h3>
                     <p>Business Strategy</p>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/150/150" alt="Jonathan">
+                    <img src="https://via.placeholder.com/150" alt="Jonathan">
                     <h3>Jonathan</h3>
                     <p>Business Strategy</p>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/150/150" alt="Lucas">
+                    <img src="https://via.placeholder.com/150" alt="Lucas">
                     <h3>Lucas</h3>
                     <p>Business Strategy</p>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/150/150" alt="Kingston">
+                    <img src="https://via.placeholder.com/150" alt="Kingston">
                     <h3>Kingston</h3>
                     <p>Digital Marketing</p>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/150/150" alt="Nidhes">
+                    <img src="https://via.placeholder.com/150" alt="Nidhes">
                     <h3>Nidhes</h3>
                     <p>Digital Marketing</p>
                 </div>
@@ -412,11 +411,10 @@
         <div class="container">
             <h2>Success Stories</h2>
             <div class="success-story">
-                <img src="/api/placeholder/300/200" alt="Little Genius Learning Center">
+                <img src="https://via.placeholder.com/300x200" alt="Little Genius Learning Center">
                 <h3>Little Genius Learning Center</h3>
                 <p>We helped Little Genius Learning Center establish an online presence through a custom website and implemented digital marketing strategies, resulting in a 50% increase in new student enrollments.</p>
             </div>
-            <!-- Add more success stories as needed -->
         </div>
     </section>
 
@@ -444,15 +442,15 @@
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
-                <div class="faq-question">What types of businesses do you work with?</div>
+                <div class="faq-question" role="button" aria-expanded="false">What types of businesses do you work with?</div>
                 <div class="faq-answer">We work with a wide range of small to medium-sized Asian businesses, including retail stores, restaurants, educational centers, and service providers. Our goal is to help any underprivileged Asian business that wants to improve its digital presence and operational efficiency.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">How long does it typically take to see results?</div>
+                <div class="faq-question" role="button" aria-expanded="false">How long does it typically take to see results?</div>
                 <div class="faq-answer">While results can vary depending on the specific services and the current state of your business, many of our clients start seeing improvements within 2-3 months. For more significant changes, such as major increases in online traffic or customer base, it may take 6-12 months.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Do you offer ongoing support after the initial service?</div>
+                <div class="faq-question" role="button" aria-expanded="false">Do you offer ongoing support after the initial service?</div>
                 <div class="faq-answer">Yes, we offer ongoing support and maintenance for all our services. We believe in building long-term relationships with our clients to ensure their continued success.</div>
             </div>
         </div>
@@ -476,7 +474,6 @@
     </footer>
 
     <script>
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -486,7 +483,6 @@
             });
         });
 
-        // Testimonial slider
         const testimonials = document.querySelectorAll('.testimonial');
         let currentTestimonial = 0;
 
@@ -496,17 +492,17 @@
             testimonials[currentTestimonial].classList.add('active');
         }
 
-        setInterval(showNextTestimonial, 5000); // Change testimonial every 5 seconds
+        setInterval(showNextTestimonial, 5000);
 
-        // FAQ toggle
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const answer = question.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                const isExpanded = question.getAttribute('aria-expanded') === 'true';
+                question.setAttribute('aria-expanded', !isExpanded);
+                answer.style.display = isExpanded ? 'none' : 'block';
             });
         });
 
-        // Form submission (for demo purposes)
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your message! We will get back to you soon. (This is a demo, no actual message was sent)');
