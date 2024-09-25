@@ -105,6 +105,7 @@
             margin-top: 20px;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         .box {
             flex: 1;
@@ -115,6 +116,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: 0.3s;
+            min-width: 200px;
         }
         .box:hover {
             transform: translateY(-5px);
@@ -138,6 +140,15 @@
             flex: 0 1 200px;
             margin: 20px;
             text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
         }
         .team-member img {
             width: 150px;
@@ -145,6 +156,15 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .team-member h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        .team-member p {
+            color: var(--text-color);
+            font-size: 0.9em;
         }
         #success-stories {
             background-color: var(--bg-color);
@@ -199,6 +219,67 @@
             background-color: var(--primary-color);
             text-align: center;
         }
+        /* New styles for additional sections */
+        #mission {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        #mission h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #mission p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #testimonials {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+        .testimonial-slider {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .testimonial {
+            display: none;
+            padding: 20px;
+        }
+        .testimonial.active {
+            display: block;
+        }
+        .testimonial q {
+            font-style: italic;
+            font-size: 1.2em;
+            color: var(--text-color);
+        }
+        .testimonial p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        #faq {
+            background-color: var(--bg-color);
+            padding: 50px 0;
+        }
+        .faq-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: #fff;
+            cursor: pointer;
+        }
+        .faq-answer {
+            padding: 15px;
+            display: none;
+        }
         @media(max-width: 768px) {
             header #branding,
             header nav,
@@ -242,6 +323,13 @@
         </div>
     </section>
 
+    <section id="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>To bridge the digital divide and ensure that every small Asian business has the tools and knowledge to thrive in the modern marketplace.</p>
+        </div>
+    </section>
+
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
@@ -279,7 +367,17 @@
                 <div class="team-member">
                     <img src="/api/placeholder/150/150" alt="Jayden">
                     <h3>Jayden</h3>
-                    <p>Web Development</p>
+                    <p>Web & App Development</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Jason">
+                    <h3>Jason</h3>
+                    <p>Web & App Development</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Daniel">
+                    <h3>Daniel</h3>
+                    <p>Web & App Development</p>
                 </div>
                 <div class="team-member">
                     <img src="/api/placeholder/150/150" alt="Matthew">
@@ -287,11 +385,25 @@
                     <p>Business Strategy</p>
                 </div>
                 <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Jonathan">
+                    <h3>Jonathan</h3>
+                    <p>Business Strategy</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Lucas">
+                    <h3>Lucas</h3>
+                    <p>Business Strategy</p>
+                </div>
+                <div class="team-member">
                     <img src="/api/placeholder/150/150" alt="Kingston">
                     <h3>Kingston</h3>
                     <p>Digital Marketing</p>
                 </div>
-                <!-- Add more team members as needed -->
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Nidhes">
+                    <h3>Nidhes</h3>
+                    <p>Digital Marketing</p>
+                </div>
             </div>
         </div>
     </section>
@@ -308,10 +420,48 @@
         </div>
     </section>
 
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <q>Asian Business Growth Solutions transformed our online presence. Our enrollment has increased significantly!</q>
+                    <p>- Sarah Lee, Little Genius Learning Center</p>
+                </div>
+                <div class="testimonial">
+                    <q>The team's expertise in digital marketing has helped us reach a whole new customer base.</q>
+                    <p>- John Chen, Chen's Authentic Cuisine</p>
+                </div>
+                <div class="testimonial">
+                    <q>Their business strategy advice has streamlined our operations and increased our profits.</q>
+                    <p>- Mary Wong, Wong's Electronics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">What types of businesses do you work with?</div>
+                <div class="faq-answer">We work with a wide range of small to medium-sized Asian businesses, including retail stores, restaurants, educational centers, and service providers. Our goal is to help any underprivileged Asian business that wants to improve its digital presence and operational efficiency.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long does it typically take to see results?</div>
+                <div class="faq-answer">While results can vary depending on the specific services and the current state of your business, many of our clients start seeing improvements within 2-3 months. For more significant changes, such as major increases in online traffic or customer base, it may take 6-12 months.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you offer ongoing support after the initial service?</div>
+                <div class="faq-answer">Yes, we offer ongoing support and maintenance for all our services. We believe in building long-term relationships with our clients to ensure their continued success.</div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <form>
+            <form id="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone Number">
@@ -334,6 +484,33 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Testimonial slider
+        const testimonials = document.querySelectorAll('.testimonial');
+        let currentTestimonial = 0;
+
+        function showNextTestimonial() {
+            testimonials[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
+        }
+
+        setInterval(showNextTestimonial, 5000); // Change testimonial every 5 seconds
+
+        // FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Form submission (for demo purposes)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon. (This is a demo, no actual message was sent)');
+            this.reset();
         });
     </script>
 </body>
