@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asian Business Growth Solutions</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <style>
@@ -25,7 +25,6 @@
         .container {
             width: 80%;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
         }
         header {
@@ -48,12 +47,10 @@
             padding: 0;
             margin: 0;
             list-style: none;
-            overflow: hidden;
+            display: flex;
         }
         header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
+            padding: 0 20px;
         }
         header #branding {
             float: left;
@@ -163,10 +160,6 @@
             color: var(--primary-color);
             margin-bottom: 5px;
         }
-        .team-member p {
-            color: var(--text-color);
-            font-size: 0.9em;
-        }
         #success-stories {
             background-color: var(--bg-color);
             padding: 50px 0;
@@ -230,11 +223,6 @@
             font-size: 2.5em;
             margin-bottom: 20px;
         }
-        #mission p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 0 auto;
-        }
         #testimonials {
             background-color: var(--white);
             padding: 50px 0;
@@ -268,7 +256,6 @@
             background-color: var(--white);
             margin-bottom: 10px;
             border-radius: 5px;
-            overflow: hidden;
         }
         .faq-question {
             padding: 15px;
@@ -425,7 +412,7 @@
             <div class="testimonial-slider">
                 <div class="testimonial active">
                     <q>Asian Business Growth Solutions transformed our online presence. Our enrollment has increased significantly!</q>
-<p>- Jany Wu, Little Genius Learning Center</p>
+                    <p>- Jany Wu, Little Genius Learning Center</p>
                 </div>
                 <div class="testimonial">
                     <q>The team's expertise in digital marketing has helped us reach a whole new customer base.</q>
@@ -448,11 +435,11 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question" role="button" aria-expanded="false">How long does it typically take to see results?</div>
-                <div class="faq-answer">While results can vary depending on the specific services and the current state of your business, many of our clients start seeing improvements within 2-3 months. For more significant changes, such as major increases in online traffic or customer base, it may take 6-12 months.</div>
+                <div class="faq-answer">Many clients see improvements within 2-3 months, while major changes can take 6-12 months.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" role="button" aria-expanded="false">Do you offer ongoing support after the initial service?</div>
-                <div class="faq-answer">Yes, we offer ongoing support and maintenance for all our services. We believe in building long-term relationships with our clients to ensure their continued success.</div>
+                <div class="faq-answer">Yes, we offer ongoing support and maintenance for all our services.</div>
             </div>
         </div>
     </section>
@@ -461,12 +448,12 @@
         <div class="container">
             <h2>Contact Us</h2>
             <form id="contact-form" action="https://formspree.io/f/myzgrlkn" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="tel" name="phone" placeholder="Your Phone Number">
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
