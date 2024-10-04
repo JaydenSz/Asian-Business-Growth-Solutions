@@ -72,20 +72,22 @@
             transition: 0.3s;
         }
         #showcase {
+            position: relative;
             min-height: 400px;
-            background: linear-gradient(rgba(26, 95, 122, 0.7), rgba(87, 197, 182, 0.7)), url('https://via.placeholder.com/1200x400') no-repeat center;
-            background-size: cover;
             text-align: center;
             color: var(--white);
             padding-top: 150px;
+            overflow: hidden;
         }
-        #showcase h1 {
-            font-size: 55px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        #showcase p {
-            font-size: 20px;
+        #bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.7); /* Optional: darken the video for better contrast */
         }
         .btn {
             display: inline-block;
@@ -303,6 +305,10 @@
     </header>
 
     <section id="showcase">
+        <video autoplay muted loop id="bg-video">
+            <source src="your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="container">
             <h1>Empowering Asian Businesses</h1>
             <p>Modernizing operations and equipping underprivileged businesses with tools for success</p>
