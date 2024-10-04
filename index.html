@@ -73,7 +73,7 @@
         }
         #showcase {
             position: relative;
-            min-height: 608px; /* Match the height of the video to ensure the video fits properly */
+            min-height: 400px;
             text-align: center;
             color: var(--white);
             padding-top: 150px;
@@ -499,6 +499,9 @@
         });
 
         document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Submitted successfully!');
+            this.reset();
         });
 
     </script>
