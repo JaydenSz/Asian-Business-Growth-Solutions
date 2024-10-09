@@ -52,9 +52,6 @@
         header li {
             padding: 0 20px;
         }
-        header #branding {
-            float: left;
-        }
         header #branding h1 {
             margin: 0;
             font-size: 1.8em;
@@ -63,13 +60,8 @@
             float: right;
             margin-top: 10px;
         }
-        header .highlight, header .current a {
+        header .highlight {
             color: var(--secondary-color);
-            font-weight: bold;
-        }
-        header a:hover {
-            color: var(--accent-color);
-            transition: 0.3s;
         }
         #showcase {
             position: relative;
@@ -79,7 +71,6 @@
             padding-top: 150px;
             overflow: hidden;
         }
-    
         #showcase video {
             position: absolute;
             top: 0;
@@ -89,13 +80,7 @@
             object-fit: cover;
             z-index: -100;
             background-size: cover;
-            transition: 1s opacity;
         }
-        #showcase .container {
-            position: relative;
-            z-index: 2;
-        }
-    
         #showcase::after {
             content: '';
             position: absolute;
@@ -104,7 +89,6 @@
             width: 100%;
             height: 100%;
             filter: brightness(0.7); 
-            z-index: 1;
         }
         .btn {
             display: inline-block;
@@ -133,7 +117,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: 0.3s;
-            min-width: 200px;
         }
         .box:hover {
             transform: translateY(-5px);
@@ -232,72 +215,17 @@
             background-color: var(--primary-color);
             text-align: center;
         }
-        #mission {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            padding: 50px 0;
-            text-align: center;
-        }
-        #mission h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        #testimonials {
-            background-color: var(--white);
-            padding: 50px 0;
-        }
-        .testimonial-slider {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .testimonial {
-            display: none;
-            padding: 20px;
-        }
-        .testimonial.active {
-            display: block;
-        }
-        .testimonial q {
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--text-color);
-        }
-        .testimonial p {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        #faq {
-            background-color: var(--bg-color);
-            padding: 50px 0;
-        }
-        .faq-item {
-            background-color: var(--white);
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-        .faq-question {
-            padding: 15px;
-            background-color: var(--secondary-color);
-            color: var(--white);
-            cursor: pointer;
-        }
-        .faq-answer {
-            padding: 15px;
-            display: none;
-        }
         @media(max-width: 768px) {
-            header #branding,
-            header nav,
-            header nav li,
-            #boxes .box,
-            .team-member {
-                float: none;
+            header ul {
+                display: block;
                 text-align: center;
-                width: 100%;
             }
-            header {
-                padding-bottom: 20px;
+            header li {
+                padding: 10px;
+            }
+            #boxes {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -328,7 +256,7 @@
         </video>
         <div class="container">
             <h1>Empowering Asian Businesses</h1>
-            <p>Modernizing operations and equipping underprivileged businesses with tools for success</p>
+            <p>Modernizing operations and equipping underprivileged businesses with tools for success.</p>
             <a href="#contact" class="btn" aria-label="Get Started">Get Started</a>
         </div>
     </section>
@@ -336,14 +264,14 @@
     <section id="mission">
         <div class="container">
             <h2>Our Mission</h2>
-            <p>To bridge the digital divide and ensure that every small Asian business has the tools and knowledge to thrive in the modern marketplace.</p>
+            <p>Our mission is to empower small Asian businesses by providing the modern tools and expertise they need to thrive in a competitive digital landscape.</p>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>Asian Business Growth Solutions is dedicated to uplifting small underprivileged Asian businesses by modernizing their operations and equipping them with tools successful businesses have. Our mission is to bridge the gap for these businesses, providing services such as website and app development, social media management, and newer business streamlining strategies.</p>
+            <p>Asian Business Growth Solutions is committed to modernizing operations for small, underprivileged Asian businesses. We offer a variety of services, including web development, digital marketing, and business strategy consulting, to help these businesses streamline operations and enhance their digital presence.</p>
         </div>
     </section>
 
@@ -354,17 +282,17 @@
                 <div class="box">
                     <i class="fas fa-laptop-code"></i>
                     <h3>Web Development</h3>
-                    <p>Custom websites to establish a strong online presence</p>
+                    <p>We create professional websites to establish a strong digital presence, improving customer engagement and driving business growth.</p>
                 </div>
                 <div class="box">
                     <i class="fas fa-bullhorn"></i>
                     <h3>Digital Marketing</h3>
-                    <p>Social media strategies to reach a wider audience</p>
+                    <p>Our social media strategies help expand your reach, engage with new audiences, and build long-term customer loyalty.</p>
                 </div>
                 <div class="box">
                     <i class="fas fa-chart-line"></i>
                     <h3>Business Strategy</h3>
-                    <p>Streamlining operations for improved efficiency</p>
+                    <p>We streamline operations and introduce new technologies to help businesses operate more efficiently and profitably.</p>
                 </div>
             </div>
         </div>
@@ -424,45 +352,12 @@
             <div class="success-story">
                 <img src="https://via.placeholder.com/300x200" alt="Little Genius Learning Center">
                 <h3>Little Genius Learning Center</h3>
-                <p>We helped Little Genius Learning Center establish an online presence through a custom website and implemented digital marketing strategies, resulting in a 50% increase in new student enrollments.</p>
+                <p>Our team developed a custom website and digital marketing strategy for Little Genius Learning Center, leading to a 50% increase in student enrollments within six months.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <q>Asian Business Growth Solutions transformed our online presence. Our enrollment has increased significantly!</q>
-                    <p>- Jany Wu, Little Genius Learning Center</p>
-                </div>
-                <div class="testimonial">
-                    <q>The team's expertise in digital marketing has helped us reach a whole new customer base.</q>
-                    <p>- John Chen, Chen's Authentic Cuisine</p>
-                </div>
-                <div class="testimonial">
-                    <q>Their business strategy advice has streamlined our operations and increased our profits.</q>
-                    <p>- Mary Wong, Wong's Electronics</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-question" role="button" aria-expanded="false">What types of businesses do you work with?</div>
-                <div class="faq-answer">We work with a wide range of small to medium-sized Asian businesses, including retail stores, restaurants, educational centers, and service providers. Our goal is to help any underprivileged Asian business that wants to improve its digital presence and operational efficiency.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" role="button" aria-expanded="false">How long does it typically take to see results?</div>
-                <div class="faq-answer">Many clients see improvements within 2-3 months, while major changes can take 6-12 months.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" role="button" aria-expanded="false">Do you offer ongoing support after the initial service?</div>
-                <div class="faq-answer">Yes, we offer ongoing support and maintenance for all our services.</div>
+            <div class="success-story">
+                <img src="https://via.placeholder.com/300x200" alt="David's CPA Services">
+                <h3>David's CPA Services</h3>
+                <p>We helped David, a CPA, modernize his practice by creating a website that showcased his services, attracted new clients, and streamlined the appointment scheduling process. His client base grew by 30%, and he received more inquiries for financial planning services.</p>
             </div>
         </div>
     </section>
@@ -471,13 +366,12 @@
         <div class="container">
             <h2>Contact Us</h2>
             <form id="contact-form" action="https://formspree.io/f/myzgrlkn" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Your Phone Number">
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
-
         </div>
     </section>
 
@@ -486,6 +380,7 @@
     </footer>
 
     <script>
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -514,11 +409,23 @@
                 answer.style.display = isExpanded ? 'none' : 'block';
             });
         });
-
+        
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-            alert('Submitted successfully!');
+            e.preventDefault();
+            const formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Your message has been sent successfully!');
+                    document.getElementById('contact-form').reset();
+                } else {
+                    alert('Oops! There was a problem with your submission. Please try again.');
+                }
+            });
         });
-
     </script>
 </body>
 </html>
