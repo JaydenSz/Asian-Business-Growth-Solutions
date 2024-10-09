@@ -371,6 +371,15 @@
         50% { opacity: 0; }
         100% { opacity: 1; }
     }
+    .box {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .box.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 </style>
 </head>
 <body>
@@ -605,6 +614,30 @@
     </footer>
 
     <script>
+        function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScrollAnimation() {
+        const boxes = document.querySelectorAll('#boxes .box');
+        boxes.forEach((box, index) => {
+            if (isElementInViewport(box)) {
+                setTimeout(() => {
+                    box.classList.add('visible');
+                }, index * 200); 
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScrollAnimation);
+    window.addEventListener('load', handleScrollAnimation);
+        
         function typeWriter(text, elementId, speed = 10) {
             const element = document.getElementById(elementId);
             let i = 0;
