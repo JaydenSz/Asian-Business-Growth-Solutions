@@ -75,11 +75,11 @@
             position: relative;
             min-height: 400px;
             text-align: center;
-            color: var(--white);
+            color: var (--white);
             padding-top: 150px;
             overflow: hidden;
         }
-    
+
         #showcase video {
             position: absolute;
             top: 0;
@@ -197,6 +197,50 @@
             border-radius: 5px;
             margin-bottom: 10px;
         }
+
+        #pricing {
+            background-color: var(--bg-color);
+            padding: 50px 0;
+        }
+        .pricing-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .pricing-plan {
+            flex: 1;
+            min-width: 250px;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .pricing-plan h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .pricing-plan p {
+            margin-bottom: 20px;
+        }
+        .pricing-plan .price {
+            font-size: 2em;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        .pricing-plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .pricing-plan ul li {
+            margin-bottom: 10px;
+        }
+        .pricing-plan .btn {
+            margin-top: 20px;
+        }
+
         #contact {
             background-color: var(--white);
             padding: 50px 0;
@@ -232,60 +276,6 @@
             background-color: var(--primary-color);
             text-align: center;
         }
-        #mission {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            padding: 50px 0;
-            text-align: center;
-        }
-        #mission h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        #testimonials {
-            background-color: var(--white);
-            padding: 50px 0;
-        }
-        .testimonial-slider {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .testimonial {
-            display: none;
-            padding: 20px;
-        }
-        .testimonial.active {
-            display: block;
-        }
-        .testimonial q {
-            font-style: italic;
-            font-size: 1.2em;
-            color: var(--text-color);
-        }
-        .testimonial p {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        #faq {
-            background-color: var(--bg-color);
-            padding: 50px 0;
-        }
-        .faq-item {
-            background-color: var(--white);
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-        .faq-question {
-            padding: 15px;
-            background-color: var(--secondary-color);
-            color: var(--white);
-            cursor: pointer;
-        }
-        .faq-answer {
-            padding: 15px;
-            display: none;
-        }
         @media(max-width: 768px) {
             header #branding,
             header nav,
@@ -313,6 +303,7 @@
                     <li class="current"><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#success-stories">Success Stories</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -365,6 +356,49 @@
                     <i class="fas fa-chart-line"></i>
                     <h3>Business Strategy</h3>
                     <p>Streamlining operations for improved efficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-table">
+                <div class="pricing-plan">
+                    <h3>Basic Plan</h3>
+                    <p>Perfect for small businesses just getting started</p>
+                    <p class="price">$199/month</p>
+                    <ul>
+                        <li>Website hosting & maintenance</li>
+                        <li>Basic SEO optimization</li>
+                        <li>1 social media ad campaign per month</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Standard Plan</h3>
+                    <p>Ideal for businesses looking to grow their reach</p>
+                    <p class="price">$399/month</p>
+                    <ul>
+                        <li>Everything in Basic Plan</li>
+                        <li>Google Ads management</li>
+                        <li>2 social media ad campaigns per month</li>
+                        <li>Monthly analytics & performance report</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Premium Plan</h3>
+                    <p>For businesses ready to scale and optimize</p>
+                    <p class="price">$799/month</p>
+                    <ul>
+                        <li>Everything in Standard Plan</li>
+                        <li>Comprehensive SEO strategy</li>
+                        <li>4 social media ad campaigns per month</li>
+                        <li>Priority support & dedicated account manager</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
                 </div>
             </div>
         </div>
@@ -519,7 +553,7 @@
                 answer.style.display = isExpanded ? 'none' : 'block';
             });
         });
-        
+
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(this);
