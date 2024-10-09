@@ -71,11 +71,23 @@
             color: var(--accent-color);
             transition: 0.3s;
         }
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            header {
+                padding-bottom: 20px;
+            }
+        }
         #showcase {
             position: relative;
             min-height: 400px;
             text-align: center;
-            color: var(--white);
+            color: var (--white);
             padding-top: 150px;
             overflow: hidden;
         }
@@ -117,6 +129,131 @@
         }
         .btn:hover {
             background: #0e6b68;
+        }
+
+        #boxes {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background: var(--white);
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            min-width: 200px;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .box i {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        #pricing {
+            background-color: var(--bg-color);
+            padding: 50px 0;
+        }
+        .pricing-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .pricing-plan {
+            flex: 1;
+            min-width: 250px;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .pricing-plan h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .pricing-plan p {
+            margin-bottom: 20px;
+        }
+        .pricing-plan .price {
+            font-size: 2em;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        .pricing-plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .pricing-plan ul li {
+            margin-bottom: 10px;
+        }
+        .pricing-plan .btn {
+            margin-top: 20px;
+        }
+
+        #team {
+            background-color: var(--white);
+            padding: 50px 0;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .team-member {
+            flex: 1 1 200px;
+            margin: 20px;
+            text-align: center;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        .team-member h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        #success-stories {
+            background-color: var(--bg-color);
+            padding: 50px 0;
+        }
+        .success-story {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .success-story img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
 
         #testimonials {
@@ -201,7 +338,6 @@
             background-color: var(--primary-color);
             text-align: center;
         }
-        
         @media(max-width: 768px) {
             header #branding,
             header nav,
@@ -250,7 +386,150 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <section id="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>To bridge the digital divide and ensure that every small Asian business has the tools and knowledge to thrive in the modern marketplace.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Asian Business Growth Solutions is dedicated to uplifting small underprivileged Asian businesses by modernizing their operations and equipping them with tools successful businesses have. Our mission is to bridge the gap for these businesses, providing services such as website and app development, social media management, and newer business streamlining strategies.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div id="boxes">
+                <div class="box">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom websites to establish a strong online presence</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Digital Marketing</h3>
+                    <p>Social media strategies to reach a wider audience</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business Strategy</h3>
+                    <p>Streamlining operations for improved efficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-table">
+                <div class="pricing-plan">
+                    <h3>Basic Plan</h3>
+                    <p>Perfect for small businesses just getting started</p>
+                    <p class="price">$199/month</p>
+                    <ul>
+                        <li>Website hosting & maintenance</li>
+                        <li>Basic SEO optimization</li>
+                        <li>1 social media ad campaign per month</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Standard Plan</h3>
+                    <p>Ideal for businesses looking to grow their reach</p>
+                    <p class="price">$399/month</p>
+                    <ul>
+                        <li>Everything in Basic Plan</li>
+                        <li>Google Ads management</li>
+                        <li>2 social media ad campaigns per month</li>
+                        <li>Monthly analytics & performance report</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Premium Plan</h3>
+                    <p>For businesses ready to scale and optimize</p>
+                    <p class="price">$799/month</p>
+                    <ul>
+                        <li>Everything in Standard Plan</li>
+                        <li>Comprehensive SEO strategy</li>
+                        <li>4 social media ad campaigns per month</li>
+                        <li>Priority support & dedicated account manager</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="ABG photos/jayden.jpg" alt="Jayden">
+                    <h3>Jayden</h3>
+                    <p>Web & App Development</p>
+                </div>
+                <div class="team-member">
+                    <img src="ABG photos/jason.jpg" alt="Jason">
+                    <h3>Jason</h3>
+                    <p>Web & App Development</p>
+                </div>
+                <div class="team-member">
+                    <img src="ABG photos/daniel1.jpg" alt="Daniel">
+                    <h3>Daniel</h3>
+                    <p>Web & App Development</p>
+                </div>
+                <div class="team-member">
+                    <img src="ABG photos/daniel1.jpg" alt="Matthew">
+                    <h3>Matthew</h3>
+                    <p>Business Strategy</p>
+                </div>
+                <div class="team-member">
+                    <img src="ABG photos/jonathan.jpg" alt="Jonathan">
+                    <h3>Jonathan</h3>
+                    <p>Business Strategy</p>
+                </div>
+                <div class="team-member">
+                    <img src="ABG photos/darry1.jpg" alt="Lucas">
+                    <h3>Lucas</h3>
+                    <p>Business Strategy</p>
+                </div>
+                <div class="team-member">
+                    <img src="ABG photos/darry1.jpg" alt="Darry">
+                    <h3>Darry</h3>
+                    <p>Digital Marketing/Business Strategy</p>
+                </div>
+                <div class="team-member">
+                    <img src="ABG photos/jonathan.jpg" alt="Nidhes">
+                    <h3>Nidhes</h3>
+                    <p>Digital Marketing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="success-stories">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="success-story">
+                <img src="https://via.placeholder.com/300x200" alt="Little Genius Learning Center">
+                <h3>Little Genius Learning Center</h3>
+                <p>We helped Little Genius Learning Center establish an online presence through a custom website and implemented digital marketing strategies, resulting in a 50% increase in new student enrollments.</p>
+            </div>
+            <div class="success-story">
+                <img src="https://via.placeholder.com/300x200" alt="David's CPA Services">
+                <h3>David's CPA Services</h3>
+                <p>We assisted David, a CPA specializing in tax returns and financial planning, by developing a professional website that streamlined client bookings and inquiries. As a result, his client base increased by 40%, and his financial planning services gained significant traction.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="testimonials">
         <div class="container">
             <h2>What Our Clients Say</h2>
@@ -271,7 +550,6 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section id="faq">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
@@ -294,11 +572,11 @@
         <div class="container">
             <h2>Contact Us</h2>
             <form id="contact-form" action="https://formspree.io/f/myzgrlkn" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone Number">
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
