@@ -78,22 +78,6 @@
         color: var(--accent-color);
         transition: 0.3s;
     }
-    @media(max-width: 768px) {
-        header .container {
-            flex-direction: column;
-            align-items: center;
-        }
-        header nav {
-            margin-top: 10px;
-        }
-        header ul {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        header li {
-            padding: 5px 10px;
-        }
-    }
     #showcase {
         position: relative;
         min-height: 100vh;
@@ -130,6 +114,12 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
     }
+    #showcase h1 {
+        font-size: 2.5em;
+    }
+    #showcase p {
+        font-size: 1.2em;
+    }
     .btn {
         display: inline-block;
         padding: 10px 30px;
@@ -141,6 +131,12 @@
     }
     .btn:hover {
         background: #0e6b68;
+    }
+    #mission h2, #about h2 {
+        font-size: 2.2em;
+    }
+    #mission p, #about p {
+        font-size: 1.1em;
     }
     #boxes {
         margin-top: 20px;
@@ -158,6 +154,13 @@
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: 0.3s;
         min-width: 200px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .box.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
     .box:hover {
         transform: translateY(-5px);
@@ -188,12 +191,10 @@
         text-align: center;
         transition: all 0.3s ease;
     }
-    
     .pricing-plan:hover {
         animation: jiggle 0.5s ease-in-out infinite;
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     }
-    
     @keyframes jiggle {
         0% { transform: rotate(0deg); }
         25% { transform: rotate(0.5deg); }
@@ -201,32 +202,26 @@
         75% { transform: rotate(-0.5deg); }
         100% { transform: rotate(0deg); }
     }
-    
     .pricing-plan h3 {
         color: var(--primary-color);
         margin-bottom: 10px;
     }
-    
     .pricing-plan p {
         margin-bottom: 20px;
     }
-    
     .pricing-plan .price {
         font-size: 2em;
         color: var(--accent-color);
         margin-bottom: 10px;
     }
-    
     .pricing-plan ul {
         list-style: none;
         padding: 0;
         margin: 20px 0;
     }
-    
     .pricing-plan ul li {
         margin-bottom: 10px;
     }
-    
     .pricing-plan .btn {
         margin-top: 20px;
     }
@@ -371,14 +366,21 @@
         50% { opacity: 0; }
         100% { opacity: 1; }
     }
-    .box {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .box.visible {
-        opacity: 1;
-        transform: translateY(0);
+    @media(max-width: 768px) {
+        header .container {
+            flex-direction: column;
+            align-items: center;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header ul {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        header li {
+            padding: 5px 10px;
+        }
     }
 </style>
 </head>
@@ -662,34 +664,33 @@
     window.addEventListener('load', handleScrollAnimation);
         
         function typeWriter(text, elementId, speed = 10) {
-            const element = document.getElementById(elementId);
-            let i = 0;
-            element.innerHTML = '';
-            element.classList.add('typing-text');
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                } else {
-                    element.classList.remove('typing-text');
-                    if (elementId === 'mission-text') {
-                        setTimeout(() => typeWriter(aboutText, 'about-text'), 1000);
-                    }
+        const element = document.getElementById(elementId);
+        let i = 0;
+        element.innerHTML = '';
+        element.classList.add('typing-text');
+        
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            } else {
+                if (elementId === 'mission-text') {
+                    setTimeout(() => typeWriter(aboutText, 'about-text'), 1000);
                 }
             }
-            
-            type();
         }
+        
+        type();
+    }
 
-        const missionText = "To bridge the digital divide and ensure that every small Asian business has the tools and knowledge to thrive in the modern marketplace.";
-        const aboutText = "Asian Business Growth Solutions is dedicated to uplifting small underprivileged Asian businesses by modernizing their operations and equipping them with tools successful businesses have. Our mission is to bridge the gap for these businesses, providing services such as website and app development, social media management, and newer business streamlining strategies.";
+    const missionText = "To bridge the digital divide and ensure that every small Asian business has the tools and knowledge to thrive in the modern marketplace.";
+    const aboutText = "Asian Business Growth Solutions is dedicated to uplifting small underprivileged Asian businesses by modernizing their operations and equipping them with tools successful businesses have. Our mission is to bridge the gap for these businesses, providing services such as website and app development, social media management, and newer business streamlining strategies.";
 
-        document.addEventListener('DOMContentLoaded', () => {
-            typeWriter(missionText, 'mission-text');
-        });
-
+    document.addEventListener('DOMContentLoaded', () => {
+        typeWriter(missionText, 'mission-text');
+    });
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
