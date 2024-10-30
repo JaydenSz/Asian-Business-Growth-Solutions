@@ -3,7 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asian Business Growth Solutions</title>
+    
+    <title>Asian Business Growth Solutions | Empowering Asian Businesses</title>
+    <meta name="description" content="Asian Business Growth Solutions empowers underprivileged Asian businesses by modernizing operations and providing tools for success.">
+    <meta name="keywords" content="Asian Business Growth Solutions, Asian businesses, business growth, digital marketing, web development, SEO, business strategy">
+    <link rel="canonical" href="https://www.yourwebsite.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Asian Business Growth Solutions",
+      "url": "https://www.yourwebsite.com/",
+      "logo": "https://www.yourwebsite.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/YourFacebookPage",
+        "https://www.linkedin.com/company/YourLinkedInProfile",
+        "https://twitter.com/YourTwitterHandle"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-123-456-7890",
+        "contactType": "Customer Support",
+        "areaServed": "AS"
+      }
+    }
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <style>
     :root {
@@ -501,42 +527,42 @@
             <h2>Our Team</h2>
             <div class="team-container">
                 <div class="team-member">
-                    <img src="ABG photos/jayden.jpg" alt="Jayden">
+                    <img src="ABG photos/jayden.jpg" alt="Jayden Szeto - Lead Web & App Developer">
                     <h3>Jayden Szeto</h3>
                     <p>Lead Web & App Developer</p>
                 </div>
                 <div class="team-member">
-                    <img src="ABG photos/jason.jpg" alt="Jason">
+                    <img src="ABG photos/jason.jpg" alt="Jason Lai - Web & App Developer">
                     <h3>Jason Lai</h3>
-                    <p>Web & App Developmer</p>
+                    <p>Web & App Developer</p>
                 </div>
                 <div class="team-member">
-                    <img src="ABG photos/daniel1.jpg" alt="Daniel">
+                    <img src="ABG photos/daniel1.jpg" alt="Daniel Guo - Web & App Developer">
                     <h3>Daniel Guo</h3>
-                    <p>Web & App Developmer</p>
+                    <p>Web & App Developer</p>
                 </div>
                 <div class="team-member">
-                    <img src="ABG photos/matthew.jpg" alt="Matthew">
+                    <img src="ABG photos/matthew.jpg" alt="Matthew Luo - Business Strategy">
                     <h3>Matthew Luo</h3>
                     <p>Business Strategy</p>
                 </div>
                 <div class="team-member">
-                    <img src="ABG photos/jonathan.jpg" alt="Jonathan">
+                    <img src="ABG photos/jonathan.jpg" alt="Jonathan Qian - Business Strategy">
                     <h3>Jonathan Qian</h3>
                     <p>Business Strategy</p>
                 </div>
                 <div class="team-member">
-                    <img src="ABG photos/lucas.JPG" alt="Lucas">
+                    <img src="ABG photos/lucas.JPG" alt="Lucas - Business Strategy">
                     <h3>Lucas</h3>
                     <p>Business Strategy</p>
                 </div>
                 <div class="team-member">
-                    <img src="ABG photos/darry1.jpg" alt="Darry">
+                    <img src="ABG photos/darry1.jpg" alt="Darry Wu - Digital Marketing/Business Strategy">
                     <h3>Darry Wu</h3>
                     <p>Digital Marketing/Business Strategy</p>
                 </div>
                 <div class="team-member">
-                    <img src="ABG photos/nidhes.png" alt="Nidhes">
+                    <img src="ABG photos/nidhes.png" alt="Nidhes - Digital Marketing">
                     <h3>Nidhes</h3>
                     <p>Digital Marketing</p>
                 </div>
@@ -617,80 +643,80 @@
 
     <script>
         function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function handleScrollAnimation() {
-        const servicesSection = document.getElementById('services');
-        const boxes = document.querySelectorAll('#boxes .box');
-        
-        if (isElementInViewport(servicesSection)) {
-            boxes.forEach((box, index) => {
-                setTimeout(() => {
-                    box.classList.add('visible');
-                }, index * 200); // 200ms delay between each box
-            });
-        } else {
-            boxes.forEach(box => {
-                box.classList.remove('visible');
-            });
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
         }
-    }
 
-    function debounce(func, wait = 20, immediate = true) {
-        let timeout;
-        return function() {
-            const context = this, args = arguments;
-            const later = function() {
-                timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
-            const callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
-    }
-
-    const debouncedHandleScrollAnimation = debounce(handleScrollAnimation);
-
-    window.addEventListener('scroll', debouncedHandleScrollAnimation);
-    window.addEventListener('load', handleScrollAnimation);
-        
-        function typeWriter(text, elementId, speed = 10) {
-        const element = document.getElementById(elementId);
-        let i = 0;
-        element.innerHTML = '';
-        element.classList.add('typing-text');
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
+        function handleScrollAnimation() {
+            const servicesSection = document.getElementById('services');
+            const boxes = document.querySelectorAll('#boxes .box');
+            
+            if (isElementInViewport(servicesSection)) {
+                boxes.forEach((box, index) => {
+                    setTimeout(() => {
+                        box.classList.add('visible');
+                    }, index * 200);
+                });
             } else {
-                if (elementId === 'mission-text') {
-                    setTimeout(() => typeWriter(aboutText, 'about-text'), 1000);
-                }
+                boxes.forEach(box => {
+                    box.classList.remove('visible');
+                });
             }
         }
-        
-        type();
-    }
 
-    const missionText = "To bridge the digital divide and ensure that every small Asian business has the tools and knowledge to thrive in the modern marketplace.";
-    const aboutText = "Asian Business Growth Solutions is dedicated to uplifting small underprivileged Asian businesses by modernizing their operations and equipping them with tools successful businesses have. Our mission is to bridge the gap for these businesses, providing services such as website and app development, social media management, and newer business streamlining strategies.";
+        function debounce(func, wait = 20, immediate = true) {
+            let timeout;
+            return function() {
+                const context = this, args = arguments;
+                const later = function() {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                const callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
+        }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        typeWriter(missionText, 'mission-text');
-    });
-        
+        const debouncedHandleScrollAnimation = debounce(handleScrollAnimation);
+
+        window.addEventListener('scroll', debouncedHandleScrollAnimation);
+        window.addEventListener('load', handleScrollAnimation);
+            
+        function typeWriter(text, elementId, speed = 10) {
+            const element = document.getElementById(elementId);
+            let i = 0;
+            element.innerHTML = '';
+            element.classList.add('typing-text');
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    if (elementId === 'mission-text') {
+                        setTimeout(() => typeWriter(aboutText, 'about-text'), 1000);
+                    }
+                }
+            }
+            
+            type();
+        }
+
+        const missionText = "To bridge the digital divide and ensure that every small Asian business has the tools and knowledge to thrive in the modern marketplace.";
+        const aboutText = "Asian Business Growth Solutions is dedicated to uplifting small underprivileged Asian businesses by modernizing their operations and equipping them with tools successful businesses have. Our mission is to bridge the gap for these businesses, providing services such as website and app development, social media management, and newer business streamlining strategies.";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            typeWriter(missionText, 'mission-text');
+        });
+            
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
